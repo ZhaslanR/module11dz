@@ -22,21 +22,12 @@ namespace module11dz
                 Console.Write("Ошибка! Введите корректное число: ");
             }
         }
-        private static void ParseNumber(out uint number)
-        {
-            while (!uint.TryParse(Console.ReadLine(), out number))
-            {
-                Console.Clear();
-                Console.Write("Ошибка! Введите корректное число: ");
-            }
-        }
-
 
         static void Main(string[] args)
         {
             List<Employee> employees = new List<Employee>();
 
-            uint numberOfEmployees;
+            int numberOfEmployees;
             Console.Write("Введите количество сотрудников: ");
             ParseNumber(out numberOfEmployees);
             for (int i = 0; i < numberOfEmployees; i++)
